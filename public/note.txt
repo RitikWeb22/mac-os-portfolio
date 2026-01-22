@@ -1,0 +1,144 @@
+/**
+ * @file: profile.config.ts
+ * @author: Ritik
+ * @summary: Product-focused Full-Stack Software Engineer (MERN + Next.js).
+ */
+
+// --------------------------------------------------
+// 1. CORE TECH STACK
+// --------------------------------------------------
+
+const TECH_STACK = {
+  frontend: [
+    "React.js",    // 95%
+    "Next.js",     // 90%
+    "Tailwind CSS", // 90%
+    "HTML5 / CSS3", // 95%
+    "GSAP / Framer", // 70%
+  ],
+  backend: [
+    "Node.js",     // 90%
+    "Express.js",  // 90%
+    "MongoDB",     // 85%
+    "PostgreSQL",  // 75%
+    "REST APIs",   // 90%
+  ],
+  ai_gen: [
+    "OpenAI APIs",
+    "Image Detection / Nano Image",
+    "Prompt Engineering",
+  ],
+  tools: [
+    "Git & GitHub",
+    "Docker (Basics)",
+    "AWS (EC2, S3)",
+    "Figma",
+    "Linux",
+  ],
+};
+
+// --------------------------------------------------
+// 2. PROFESSIONAL EXPERIENCE
+// --------------------------------------------------
+
+type Impact = {
+  role: string;
+  achievements: string[];
+  tech: string[];
+};
+
+class ProfessionalHistory {
+  /**
+   * CURRENT ROLE
+   * @period 2023 - Present
+   */
+  public async Independent_Developer(): Promise<Impact> {
+    const role = "Full-Stack Software Engineer";
+
+    const achievements = [
+      "Built production-ready MERN & Next.js applications",
+      "Developed AI-powered web products using GenAI APIs",
+      "Optimized frontend performance (Lighthouse 85 → 97)",
+      "Designed scalable REST APIs with authentication",
+      "Deployed applications on Vercel & AWS",
+    ];
+
+    const tech = ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS", "GenAI"];
+
+    return { role, achievements, tech };
+  }
+
+  /**
+   * PROJECT EXPERIENCE
+   * @period 2022 - 2023
+   */
+  public Product_Building_Phase(): void {
+    // Key Projects:
+    // 1. AI Interior Design Generator (Next.js + GenAI)
+    // 2. Metal Industry Business Website (React + API)
+    // 3. Figma-like Web Editor using DOM & Canvas
+    // 4. Full Authentication System (JWT + Role Based Access)
+  }
+}
+
+// --------------------------------------------------
+// 3. PROJECT HIGHLIGHTS
+// --------------------------------------------------
+
+interface Project {
+  name: string;
+  description: string;
+  stack: string[];
+}
+
+const featuredProjects: Project[] = [
+  {
+    name: "AI Interior Design Generator",
+    description: "AI-powered web app that generates interior designs from user input.",
+    stack: ["Next.js", "Tailwind CSS", "OpenAI", "Vercel"],
+  },
+  {
+    name: "Refund Image Verification System",
+    description: "Detects AI-generated or manipulated images to prevent refund scams.",
+    stack: ["MERN", "GenAI", "Image Detection"],
+  },
+  {
+    name: "Figma-like Web Editor",
+    description: "Layer-based visual editor with drag, zoom, history, and export features.",
+    stack: ["JavaScript", "DOM", "Canvas API"],
+  },
+];
+
+// --------------------------------------------------
+// 4. EDUCATION
+// --------------------------------------------------
+
+const education = {
+  degree: "Bachelor’s Degree (Computer / IT Related)",
+  focus: ["Data Structures & Algorithms", "Web Development", "Software Engineering"],
+};
+
+// --------------------------------------------------
+// 5. CAREER STATUS
+// --------------------------------------------------
+
+const availability = {
+  status: "Open to Opportunities",
+  location: "India / Remote",
+  interests: ["Product Engineering", "Startup Environment", "AI-driven Applications"],
+};
+
+export default new ProfessionalHistory();
+
+
+```bash
+# TERMINAL OUTPUT
+# ---------------------------------------
+$ ritik --profile
+> Role: Full-Stack Software Engineer
+> Stack: MERN | Next.js | GenAI
+> Projects: Production-Ready
+> Availability: Open to Opportunities
+> Location: New Delhi
+> Status: Ready to Build 🚀
+```
