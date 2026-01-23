@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./app.scss";
 import Docks from "./components/Docks";
 import Clock from "./components/Clock";
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import MacWindows from "./components/windows/MacWindows";
 import Github from "./components/windows/Github";
 import Note from "./components/windows/note";
