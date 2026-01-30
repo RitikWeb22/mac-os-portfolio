@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "name": "Ritik",
+    "linkedinUrl": "https://www.linkedin.com/in/ritik-03b8aa288/",
+    "headline": "Full-Stack Developer | MERN & Next.js Enthusiast | Building Scalable Web & SaaS Applications | BCA Student",
+    "location": "New Delhi, India",
+    "connections": "500+",
+    "about": "I’m a dedicated Full-Stack Developer and BCA in Software Engineering student at Amity University Online, passionate about building scalable web applications and SaaS solutions. Currently part of Sheryians Cohort 2.0, I’m honing my skills across:    Full-Stack Development: MERN & Next.js, creating end-to-end web solutions.Problem Solving: Strong foundation in Data Structures & Algorithms for efficient coding.Emerging Tech: Exploring Web3, Generative AI, DevOps, and AWS to stay at the forefront of innovation.    I’m a proactive learner, eager to connect with professionals and contribute to meaningful opportunities that allow me to grow as a Engineer and Developer. 🚀",
+    "avatar": "./linkedinpro.jpg",
+    "banner": "./banner.jpg"
+  },
+
+  "skills": ["React.js", "JavaScript", "Node.js", "SCSS", "Firebase", "Git", "UI/UX"]
+}

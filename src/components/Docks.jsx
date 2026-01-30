@@ -2,77 +2,51 @@ import React from "react";
 import "./dock.scss";
 
 const Docks = ({ windowState, setWindowState }) => {
+  const dockItems = [
+    { id: "github", label: "GitHub", icon: "github.png" },
+    { id: "linkedin", label: "LinkedIn", icon: "linkedin.png" }, // New LinkedIn Window
+    { id: "note", label: "Notes", icon: "notepad.png" },
+    { id: "resume", label: "Resume", icon: "pdf.png" },
+    { id: "videoResume", label: "Video", icon: "video-calling.png" },
+    { id: "spotify", label: "Spotify", icon: "music-player.png" },
+    { id: "cli", label: "Terminal", icon: "terminal.png" },
+  ];
+
+  const handleOpen = (id) => {
+    setWindowState((state) => ({ ...state, [id]: true }));
+  };
+
   return (
-    <footer className="dock">
-      <div
-        onClick={() => setWindowState((state) => ({ ...state, github: true }))}
-        className="icon github"
-      >
-        <img src="./doc-icons/github.png" alt="github" />
-        <span className="tooltip">GitHub</span>
-      </div>
-      <div
-        onClick={() => setWindowState((state) => ({ ...state, note: true }))}
-        className="icon note"
-      >
-        <img src="./doc-icons/notepad.png" alt="note" />
-        <span className="tooltip">Note</span>
-      </div>
-      <div
-        onClick={() => setWindowState((state) => ({ ...state, resume: true }))}
-        className="icon pdf"
-      >
-        <img src="./doc-icons/pdf.png" alt="resume" />
-        <span className="tooltip">Resume</span>
-      </div>
+    <footer className="dock-container">
+      <div className="dock-wrapper">
+        {dockItems.map((item) => (
+          <div
+            key={item.id}
+            className={`icon-box ${windowState[item.id] ? "active" : ""}`}
+            onClick={() => handleOpen(item.id)}
+          >
+            <img src={`./doc-icons/${item.icon}`} alt={item.label} />
+            <span className="tooltip">{item.label}</span>
+            {/* The little dot below active apps */}
+            {windowState[item.id] && <div className="indicator" />}
+          </div>
+        ))}
 
-      <div
-        onClick={() =>
-          setWindowState((state) => ({ ...state, videoResume: true }))
-        }
-        className="icon video"
-      >
-        <img src="./doc-icons/video-calling.png" alt="video resume" />
-        <span className="tooltip">Video Resume</span>
-      </div>
-      <div
-        onClick={() => window.open("mailto:ritikweb30@gmail.com", "_blank")}
-        className="icon mail"
-      >
-        <img src="./doc-icons/gmail.png" alt="mail" />
-        <span className="tooltip">Mail</span>
-      </div>
-      <div
-        onClick={() => setWindowState((state) => ({ ...state, spotify: true }))}
-        className="icon music"
-      >
-        <img src="./doc-icons/music-player.png" alt="spotify" />
-        <span className="tooltip">Fav Music</span>
-      </div>
+        <div className="divider"></div>
 
-      <div
-        onClick={() => window.open("https://calendar.google.com", "_blank")}
-        className="icon calendar"
-      >
-        <img src="./doc-icons/google-calendar.png" alt="calendar" />
-
-        <span className="tooltip">Calendar</span>
-      </div>
-      <div
-        onClick={() =>
-          window.open("https://www.linkedin.com/in/ritik-03b8aa288/", "_blank")
-        }
-        className="icon links"
-      >
-        <img src="./doc-icons/linkedin.png" alt="link" />
-        <span className="tooltip">LinkedIn</span>
-      </div>
-      <div
-        onClick={() => setWindowState((state) => ({ ...state, cli: true }))}
-        className="icon cli"
-      >
-        <img src="./doc-icons/terminal.png" alt="cli" />
-        <span className="tooltip">Cli</span>
+        {/* External Links */}
+        <div
+          className="icon-box"
+          onClick={() =>
+            window.open(
+              "https://mail.google.com/mail/?view=cm&fs=1&to=ritikweb30@gmail.com",
+              "_blank",
+            )
+          }
+        >
+          <img src="./doc-icons/gmail.png" alt="mail" />
+          <span className="tooltip">Gmail</span>
+        </div>
       </div>
     </footer>
   );

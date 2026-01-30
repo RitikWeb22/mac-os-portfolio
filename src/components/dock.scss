@@ -1,106 +1,88 @@
-.dock {
+.dock-container {
+  position: fixed;
+  bottom: 15px; // Thoda sa ground se upar
+  width: 100%;
   display: flex;
-  position: absolute;
-  gap: 0.75rem;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(63, 63, 63, 0.247);
-  backdrop-filter: blur(5px);
-  padding-inline: 1rem;
-  padding-block: 0.75rem;
-  border-radius: 0.75rem;
-  align-items: flex-end; // Icons bottom se align rahengi
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: none;
+}
 
-  .icon {
-    position: relative; // Tooltip ke liye zaroori hai
-    padding: 0.65rem;
-    border-radius: 0.5rem;
-    aspect-ratio: 1/1;
-    width: 3rem;
+.dock-wrapper {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+  .divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 5px;
+  }
+
+  .icon-box {
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    transition: all 0.2s linear;
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
     cursor: pointer;
 
     img {
-      width: 2rem;
+      width: 48px; // Original comfortable size
+      height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
     }
 
-    // Tooltip Styling
-    .tooltip {
-      position: absolute;
-      top: -2.5rem; // Icon ke upar position
-      left: 50%;
-      transform: translateX(-50%) scale(0.8);
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 0.3rem 0.6rem;
-      border-radius: 0.4rem;
-      font-size: 0.7rem;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.2s ease;
-
-      // Chota arrow niche
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-width: 4px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
-      }
-    }
-
-    // Hover Effects
     &:hover {
-      transform: scale(1.25) translateY(-20%);
+      transform: scale(1.15) translateY(-5px);
 
       .tooltip {
         opacity: 1;
-        transform: translateX(-50%) scale(1);
-        top: -3rem; // Hover pe thoda aur upar move hoga
+        visibility: visible;
       }
     }
-  }
 
-  // Neighboring icons scaling (macOS effect)
-  .icon:hover + .icon,
-  .icon:has(+ .icon:hover) {
-    transform: scale(1.1) translateY(-10%);
-  }
+    .tooltip {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20, 20, 20, 0.8);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
 
-  // Background Colors for Icons
-  .github {
-    background: #000;
+    .indicator {
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -8px; // Icon ke thoda niche
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    }
   }
-  .note {
-    background: linear-gradient(to bottom, #7ed5f8, #7294f9);
-  }
-  .pdf {
-    background: linear-gradient(to bottom, #ff5a51, #ef0e0e);
-  }
-  .mail {
-    background: #fff;
-  }
-  .music {
-    background: linear-gradient(to bottom, #cd4b4b, #d45434);
-  }
-  .calendar {
-    background: #fff;
-  }
-  .links {
-    background: linear-gradient(to bottom, #87b2fc, #4b8bfa);
-  }
-  .cli {
-    background: #fff;
-  }
-  .video {
-    background: linear-gradient(to bottom, #b687fc, #5725d4);
-  }
+}
+
+// Simple click effect
+.icon-box:active {
+  transform: scale(0.9) translateY(0);
 }

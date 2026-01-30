@@ -3,34 +3,46 @@ import "./app.scss";
 import Docks from "./components/Docks";
 import Clock from "./components/Clock";
 import Nav from "./components/Nav";
-import MacWindows from "./components/windows/MacWindows";
 import Github from "./components/windows/Github";
 import Note from "./components/windows/Note";
 import Resume from "./components/windows/Resume";
 import Spotify from "./components/windows/Spotify";
 import Cli from "./components/windows/Cli";
-import CalendarWidget from "./components/widgets/CalendarWidget";
 import VideoResume from "./components/windows/VideoResume";
+// 1. Import your new Linkedin component
+import Linkedin from "./components/windows/Linkedin";
+import StickyNotes from "./components/widgets/StickyNotes";
 
 const App = () => {
+  // 2. Added linkedin: false to the initial state
   const [windowState, setWindowState] = useState({
     github: false,
+    linkedin: false,
     note: false,
     resume: false,
     spotify: false,
     cli: false,
     videoResume: false,
   });
+
   return (
     <main>
       <Nav />
-
       <Clock />
-
+      {/* 3. Passing windowState to Docks for active indicators */}
       <Docks windowState={windowState} setWindowState={setWindowState} />
+      {/* WINDOW RENDERING SECTION */}
       {windowState.github && (
         <Github
           windowName="github"
+          windowState={windowState}
+          setWindowState={setWindowState}
+        />
+      )}
+      {/* 4. Render the LinkedIn Window */}
+      {windowState.linkedin && (
+        <Linkedin
+          windowName="linkedin"
           windowState={windowState}
           setWindowState={setWindowState}
         />
@@ -70,8 +82,10 @@ const App = () => {
           setWindowState={setWindowState}
         />
       )}
-
-      <CalendarWidget />
+      <StickyNotes
+        initialText="Welcome to my Portfolio! 🚀"
+        initialColor="#77abfe"
+      />
     </main>
   );
 };
