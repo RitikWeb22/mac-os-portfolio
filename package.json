@@ -17,6 +17,7 @@
     "react-rnd": "^10.5.2",
     "react-syntax-highlighter": "^16.1.0",
     "react-tooltip-z": "^2.6.0",
+    "remixicon": "^4.9.1",
     "sass": "^1.97.2"
   },
   "devDependencies": {

@@ -20,12 +20,12 @@ main {
   background-position: center;
   overflow: hidden;
   .clock {
-    // background: rebeccapurple;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     h1 {
       font-size: 8rem;
       color: #0a58be8a;
@@ -41,9 +41,38 @@ main {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
+      text-align: center;
     }
     h2 {
       font-size: 3rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) and (min-width: 480px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 479px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
     }
   }
 }

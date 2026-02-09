@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./app.scss";
+import "remixicon/fonts/remixicon.css";
 import Docks from "./components/Docks";
 import Clock from "./components/Clock";
 import Nav from "./components/Nav";
@@ -12,6 +13,7 @@ import VideoResume from "./components/windows/VideoResume";
 // 1. Import your new Linkedin component
 import Linkedin from "./components/windows/Linkedin";
 import StickyNotes from "./components/widgets/StickyNotes";
+import Achievements from "./components/Achievements";
 
 const App = () => {
   // 2. Added linkedin: false to the initial state
@@ -23,6 +25,7 @@ const App = () => {
     spotify: false,
     cli: false,
     videoResume: false,
+    achievements: false,
   });
 
   return (
@@ -78,6 +81,13 @@ const App = () => {
       {windowState.videoResume && (
         <VideoResume
           windowName="videoResume"
+          windowState={windowState}
+          setWindowState={setWindowState}
+        />
+      )}
+      {windowState.achievements && (
+        <Achievements
+          windowName="achievements"
           windowState={windowState}
           setWindowState={setWindowState}
         />

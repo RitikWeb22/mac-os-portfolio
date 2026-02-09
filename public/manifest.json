@@ -1,0 +1,21 @@
+{
+  "name": "Ritik - Full Stack Developer Portfolio",
+  "short_name": "Ritik Portfolio",
+  "description": "Professional portfolio showcasing innovative web development projects and modern design solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a84ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

@@ -25,7 +25,9 @@ const MacWindows = ({
                 setWindowState((state) => ({ ...state, [windowName]: false }))
               }
               className="dot red"
-            ></div>
+            >
+              <i class="ri-close-fill"></i>
+            </div>
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
