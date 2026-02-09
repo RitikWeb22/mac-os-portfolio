@@ -196,9 +196,7 @@ This project is open source and available for personal use.
 **Ritik**
 
 - Email: ritikweb30@gmail.com
-- GitHub: [Your GitHub Profile]
-- LinkedIn: [Your LinkedIn Profile]
-
+  LinkedIn: (https://www.linkedin.com/in/ritik-03b8aa288/)
 ---
 
 **Built with ❤️ using React + Vite**
