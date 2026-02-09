@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Rnd } from "react-rnd";
 import "./achievements.scss";
 import MacWindows from "./windows/MacWindows";
 
@@ -17,44 +16,28 @@ const Achievements = ({
   };
 
   const event = {
-    name: "My Amazing Event",
-    date: "February 2024",
+    name: "Guest Speaker - JavaScript Workshop",
+    date: "Sarvodaya Bal & Kanya Vidyalaya, Dwarka Sec 1",
     photos: [
       {
         id: 1,
-        image:
-          "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop",
-        caption: "Photo 1",
+        image: "/achivements/1.webp",
+        caption: "Invited as a guest speaker for JavaScript",
       },
       {
         id: 2,
-        image:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
-        caption: "Photo 2",
+        image: "/achivements/2.jpg",
+        caption: "Session highlights with students",
       },
       {
         id: 3,
-        image:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
-        caption: "Photo 3",
+        image: "/achivements/3.jpg",
+        caption: "Hands-on learning moments",
       },
       {
         id: 4,
-        image:
-          "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop",
-        caption: "Photo 4",
-      },
-      {
-        id: 5,
-        image:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
-        caption: "Photo 5",
-      },
-      {
-        id: 6,
-        image:
-          "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop",
-        caption: "Photo 6",
+        image: "/achivements/4.avif",
+        caption: "Guest lecture at the school",
       },
     ],
   };
