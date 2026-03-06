@@ -16,14 +16,14 @@ const VideoResume = ({
       title: "Introduction Video",
       src: "./video.mp4",
       thumb:
-        "https://images.unsplash.com/photo-1607112812619-182cb1c7bb61?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://ik.imagekit.io/3wi7dthyny/mac-os/2026-03-06_15-34-03.mp4?updatedAt=1772791791491",
     },
     {
       id: 2,
       title: "Project Demo - E-commerce",
       src: "./project1.mp4",
       thumb:
-        "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://ik.imagekit.io/3wi7dthyny/mac-os/2026-03-06_15-34-03.mp4?updatedAt=1772791791491",
     },
     {
       id: 3,

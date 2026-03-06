@@ -9,7 +9,10 @@ const Resume = ({ windowName, windowState, setWindowState }) => {
       setWindowState={setWindowState}
     >
       <div className="resume-container">
-        <iframe src="./resume.pdf" frameborder="0"></iframe>{" "}
+        <iframe
+          src="https://ik.imagekit.io/3wi7dthyny/mac-os/resume.pdf"
+          frameborder="0"
+        ></iframe>{" "}
       </div>
     </MacWindows>
   );

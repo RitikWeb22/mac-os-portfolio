@@ -21,22 +21,22 @@ const Achievements = ({
     photos: [
       {
         id: 1,
-        image: "/achivements/1.webp",
+        image: "https://ik.imagekit.io/3wi7dthyny/mac-os/achivements/1.webp",
         caption: "Invited as a guest speaker for JavaScript",
       },
       {
         id: 2,
-        image: "/achivements/2.jpg",
+        image: "https://ik.imagekit.io/3wi7dthyny/mac-os/achivements/2.jpg",
         caption: "Session highlights with students",
       },
       {
         id: 3,
-        image: "/achivements/3.jpg",
+        image: "https://ik.imagekit.io/3wi7dthyny/mac-os/achivements/3.jpg",
         caption: "Hands-on learning moments",
       },
       {
         id: 4,
-        image: "/achivements/4.avif",
+        image: "https://ik.imagekit.io/3wi7dthyny/mac-os/achivements/4.avif",
         caption: "Guest lecture at the school",
       },
     ],
