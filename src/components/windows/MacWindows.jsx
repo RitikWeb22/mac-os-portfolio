@@ -4,6 +4,9 @@ const MacWindows = ({
   children,
   width = "40vw",
   height = "70vh",
+  minWidth = 320,
+  minHeight = 260,
+  windowTitle = "Ritik - zsh",
   windowName,
   windowState,
   setWindowState,
@@ -16,6 +19,11 @@ const MacWindows = ({
         x: 200,
         y: 50,
       }}
+      bounds="parent"
+      minWidth={minWidth}
+      minHeight={minHeight}
+      dragHandleClassName="nav"
+      cancel=".main-content"
     >
       <div className="windows">
         <div className="nav">
@@ -26,13 +34,13 @@ const MacWindows = ({
               }
               className="dot red"
             >
-              <i class="ri-close-fill"></i>
+              <i className="ri-close-fill"></i>
             </div>
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <div className="title">
-            <p>Ritik -zsh</p>
+          <div className="window-title">
+            <p>{windowTitle}</p>
           </div>
         </div>
         <div className="main-content">{children}</div>

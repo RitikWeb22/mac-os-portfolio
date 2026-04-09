@@ -2,7 +2,6 @@ import React from "react";
 import Terminal from "react-console-emulator";
 import MacWindows from "./MacWindows";
 import "./cli.scss";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 const COMMANDS = {
   about: {
@@ -174,6 +173,11 @@ const welcomeMessage = `
 const Cli = ({ windowName, windowState, setWindowState }) => {
   return (
     <MacWindows
+      width="52vw"
+      height="72vh"
+      minWidth={420}
+      minHeight={320}
+      windowTitle="Terminal"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}

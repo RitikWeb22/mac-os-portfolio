@@ -5,6 +5,10 @@ const Spotify = ({ windowName, windowState, setWindowState }) => {
   return (
     <MacWindows
       width="25vw"
+      height="58vh"
+      minWidth={320}
+      minHeight={300}
+      windowTitle="Spotify"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}
@@ -17,7 +21,7 @@ const Spotify = ({ windowName, windowState, setWindowState }) => {
           width="100%"
           height="352"
           frameBorder="0"
-          allowfullscreen=""
+          allowFullScreen
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>

@@ -60,6 +60,11 @@ const Achievements = ({
 
   return (
     <MacWindows
+      width="60vw"
+      height="78vh"
+      minWidth={500}
+      minHeight={340}
+      windowTitle="Achievements"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}

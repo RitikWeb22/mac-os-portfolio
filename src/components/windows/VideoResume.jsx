@@ -38,6 +38,11 @@ const VideoResume = ({
 
   return (
     <MacWindows
+      width="66vw"
+      height="80vh"
+      minWidth={540}
+      minHeight={360}
+      windowTitle="Video Resume"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}

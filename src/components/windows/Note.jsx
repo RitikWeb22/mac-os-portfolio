@@ -16,6 +16,11 @@ const Note = ({ windowName, windowState, setWindowState }) => {
 
   return (
     <MacWindows
+      width="50vw"
+      height="72vh"
+      minWidth={420}
+      minHeight={320}
+      windowTitle="Notes"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}

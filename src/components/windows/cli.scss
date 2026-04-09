@@ -1,9 +1,28 @@
 .cli-window {
   height: 100%;
   overflow: auto;
-  padding-bottom: 3rem;
+  padding: 0.75rem;
+  padding-bottom: 1rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(56, 189, 248, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 1));
+
   div[name="react-console-emulator"] {
     height: 100%;
     background-color: transparent !important;
+    border: 1px solid rgba(148, 163, 184, 0.25) !important;
+    border-radius: 12px;
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    * {
+      font-family: "IBM Plex Mono", "Consolas", monospace !important;
+      letter-spacing: 0.02em;
+    }
   }
 }

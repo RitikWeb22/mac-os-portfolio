@@ -54,6 +54,11 @@ const Card = ({ data }) => {
 const Github = ({ windowName, windowState, setWindowState }) => {
   return (
     <MacWindows
+      width="68vw"
+      height="78vh"
+      minWidth={560}
+      minHeight={360}
+      windowTitle="Projects"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}

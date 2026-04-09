@@ -8,6 +8,11 @@ const Linkedin = ({ windowName, windowState, setWindowState }) => {
 
   return (
     <MacWindows
+      width="62vw"
+      height="80vh"
+      minWidth={500}
+      minHeight={360}
+      windowTitle="LinkedIn"
       windowName={windowName}
       windowState={windowState}
       setWindowState={setWindowState}
