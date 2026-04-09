@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 18px;
-  color: #fff;
+  color: #3b3eff;
   font-size: 13px;
   font-weight: 500;
   z-index: 10000;
@@ -19,11 +19,6 @@
     position: absolute;
     inset: 0 12px;
     border-radius: 999px;
-
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
     z-index: -1;
   }
 
