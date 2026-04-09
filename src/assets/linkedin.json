@@ -2,13 +2,26 @@
   "profile": {
     "name": "Ritik",
     "linkedinUrl": "https://www.linkedin.com/in/ritik-03b8aa288/",
-    "headline": "Full-Stack Developer | MERN & Next.js Enthusiast | Building Scalable Web & SaaS Applications | BCA Student",
+    "headline": "Full-Stack Developer | MERN, TypeScript, and AI Workflows | Building Scalable Web and SaaS Products",
     "location": "New Delhi, India",
     "connections": "500+",
-    "about": "I’m a dedicated Full-Stack Developer and BCA in Software Engineering student at Amity University Online, passionate about building scalable web applications and SaaS solutions. Currently part of Sheryians Cohort 2.0, I’m honing my skills across:    Full-Stack Development: MERN & Next.js, creating end-to-end web solutions.Problem Solving: Strong foundation in Data Structures & Algorithms for efficient coding.Emerging Tech: Exploring Web3, Generative AI, DevOps, and AWS to stay at the forefront of innovation.    I’m a proactive learner, eager to connect with professionals and contribute to meaningful opportunities that allow me to grow as a Engineer and Developer. 🚀",
+    "about": "Hi, I am Ritik, a full-stack developer focused on building scalable web and mobile applications with MERN, TypeScript, and modern AI workflows. I actively build product-style projects from idea to deployment, including IntellixChat, VIZO, PIXELFLIX, Software Helper, AI Dealer Breaker, AI Battle Areana, and this macOS portfolio experience. My current strengths are React, Node.js, Express, MongoDB, real-time architecture, and modern UI systems. I am a BCA student in Software Engineering at Amity University Online and part of Sheryians Cohort 2.0, continuously improving through hands-on shipping and problem solving.",
     "avatar": "./linkedinpro.jpg",
     "banner": "./banner.jpg"
   },
 
-  "skills": ["React.js", "JavaScript", "Node.js", "SCSS", "Firebase", "Git", "UI/UX"]
+  "skills": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "SCSS",
+    "LangChain",
+    "LangGraph",
+    "Redis",
+    "Git",
+    "UI Engineering"
+  ]
 }
