@@ -29,31 +29,6 @@ const App = () => {
 
   return (
     <main className="desktop-shell">
-      <div
-        className="desktop-shell__aurora desktop-shell__aurora--one"
-        aria-hidden="true"
-      />
-      <div
-        className="desktop-shell__aurora desktop-shell__aurora--two"
-        aria-hidden="true"
-      />
-      <div className="desktop-shell__grid" aria-hidden="true" />
-
-      <section className="hero-panel" aria-label="Portfolio introduction">
-        <p className="hero-panel__eyebrow">Portfolio Operating System</p>
-        <h1>Ritik Web22</h1>
-        <h2>
-          Building interfaces with the feel of a product studio, the depth of a
-          system, and the polish of a flagship launch.
-        </h2>
-        <div className="hero-panel__chips" aria-label="Core strengths">
-          <span>AI-first</span>
-          <span>Full-stack</span>
-          <span>UI systems</span>
-          <span>Realtime</span>
-        </div>
-      </section>
-
       <Nav />
       <Clock />
       <Docks windowState={windowState} setWindowState={setWindowState} />

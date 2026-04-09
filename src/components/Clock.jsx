@@ -13,20 +13,13 @@ const Clock = () => {
   const hours = time.getHours();
   const ampm = hours >= 12 ? "PM" : "AM";
   const displayHours = hours % 12 || 12;
-  const dateLabel = time.toLocaleDateString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-  });
 
   return (
     <div className="clock">
-      <p className="clock-label">Local time</p>
       <h1>
         {format(displayHours)}:{format(time.getMinutes())}
-        <span className="clock__ampm">{ampm}</span>
+        <span style={{ fontSize: "0.5em", marginLeft: "5px" }}>{ampm}</span>
       </h1>
-      <p className="clock-subline">{dateLabel}</p>
     </div>
   );
 };
