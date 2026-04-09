@@ -19,11 +19,7 @@
     position: absolute;
     inset: 0 12px;
     border-radius: 999px;
-    background: linear-gradient(
-      180deg,
-      rgba(12, 16, 32, 0.72),
-      rgba(7, 11, 24, 0.52)
-    );
+
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
     border: 1px solid rgba(255, 255, 255, 0.12);
