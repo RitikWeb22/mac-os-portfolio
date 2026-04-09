@@ -52,6 +52,60 @@
       ],
       "repoLink": "https://github.com/RitikWeb22/pixelFlix.git",
       "demoLink": "https://pixelflix-19at.onrender.com"
+    },
+    {
+      "id": 3,
+      "image": "https://ik.imagekit.io/3wi7dthyny/mac-os/Screenshot%202026-04-09%20091732.png",
+      "title": "SOFTWARE HELPER — AI Software Planning Workspace",
+      "description": "An AI-powered full-stack planning workspace that transforms a problem statement into structured product analysis, system architecture, database design, and final summary outputs.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "LangGraph",
+        "LangChain",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "repoLink": "https://github.com/RitikWeb22/software-helper",
+      "demoLink": "https://github.com/RitikWeb22/software-helper"
+    },
+    {
+      "id": 4,
+      "image": "https://ik.imagekit.io/3wi7dthyny/mac-os/image.png",
+      "title": "AI DEALER BREAKER — Voice-Powered Negotiation Platform",
+      "description": "An AI-powered shopping negotiation app where users join live voice sessions, compete for best deals, and track outcomes on a real-time leaderboard.",
+      "tags": [
+        "React 19",
+        "JavaScript",
+        "Node.js",
+        "Express 5",
+        "MongoDB",
+        "JWT Auth",
+        "Vapi",
+        "Framer Motion"
+      ],
+      "repoLink": "https://github.com/RitikWeb22/ai-dealer-breaker",
+      "demoLink": "https://github.com/RitikWeb22/ai-dealer-breaker"
+    },
+    {
+      "id": 5,
+      "image": "https://ik.imagekit.io/3wi7dthyny/mac-os/image.png",
+      "title": "AI BATTLE AREANA — Multi-Model Battle App",
+      "description": "A full-stack LangGraph arena where two model-generated solutions compete side-by-side and a judge model scores both with reasoning.",
+      "tags": [
+        "React 19",
+        "TypeScript",
+        "Node.js",
+        "Express 5",
+        "LangGraph",
+        "LangChain",
+        "Sass",
+        "Gemini/Mistral/Cohere"
+      ],
+      "repoLink": "https://github.com/RitikWeb22/ai-battle-areana",
+      "demoLink": "https://github.com/RitikWeb22/ai-battle-areana"
     }
   ]
 }
