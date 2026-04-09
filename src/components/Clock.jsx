@@ -10,17 +10,23 @@ const Clock = () => {
 
   const format = (num) => num.toString().padStart(2, "0");
 
-  // AM/PM Logic
   const hours = time.getHours();
   const ampm = hours >= 12 ? "PM" : "AM";
-  const displayHours = hours % 12 || 12; // 0 ko 12 mein convert karta hai 12-hour format ke liye
+  const displayHours = hours % 12 || 12;
+  const dateLabel = time.toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  });
 
   return (
     <div className="clock">
+      <p className="clock-label">Local time</p>
       <h1>
         {format(displayHours)}:{format(time.getMinutes())}
-        <span style={{ fontSize: "0.5em", marginLeft: "5px" }}>{ampm}</span>
+        <span className="clock__ampm">{ampm}</span>
       </h1>
+      <p className="clock-subline">{dateLabel}</p>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import "remixicon/fonts/remixicon.css";
 import Docks from "./components/Docks";
@@ -16,7 +16,6 @@ import StickyNotes from "./components/widgets/StickyNotes";
 import Achievements from "./components/Achievements";
 
 const App = () => {
-  // 2. Added linkedin: false to the initial state
   const [windowState, setWindowState] = useState({
     github: false,
     linkedin: false,
@@ -29,12 +28,35 @@ const App = () => {
   });
 
   return (
-    <main>
+    <main className="desktop-shell">
+      <div
+        className="desktop-shell__aurora desktop-shell__aurora--one"
+        aria-hidden="true"
+      />
+      <div
+        className="desktop-shell__aurora desktop-shell__aurora--two"
+        aria-hidden="true"
+      />
+      <div className="desktop-shell__grid" aria-hidden="true" />
+
+      <section className="hero-panel" aria-label="Portfolio introduction">
+        <p className="hero-panel__eyebrow">Portfolio Operating System</p>
+        <h1>Ritik Web22</h1>
+        <h2>
+          Building interfaces with the feel of a product studio, the depth of a
+          system, and the polish of a flagship launch.
+        </h2>
+        <div className="hero-panel__chips" aria-label="Core strengths">
+          <span>AI-first</span>
+          <span>Full-stack</span>
+          <span>UI systems</span>
+          <span>Realtime</span>
+        </div>
+      </section>
+
       <Nav />
       <Clock />
-      {/* 3. Passing windowState to Docks for active indicators */}
       <Docks windowState={windowState} setWindowState={setWindowState} />
-      {/* WINDOW RENDERING SECTION */}
       {windowState.github && (
         <Github
           windowName="github"
@@ -42,7 +64,6 @@ const App = () => {
           setWindowState={setWindowState}
         />
       )}
-      {/* 4. Render the LinkedIn Window */}
       {windowState.linkedin && (
         <Linkedin
           windowName="linkedin"
@@ -93,7 +114,7 @@ const App = () => {
         />
       )}
       <StickyNotes
-        initialText="Welcome to my Portfolio! 🚀"
+        initialText="Drop ideas, links, and reminders here."
         initialColor="#77abfe"
       />
     </main>

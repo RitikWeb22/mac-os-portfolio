@@ -1,44 +1,69 @@
 .macos-navbar {
-  height: 28px; // Original macOS height
+  height: 44px;
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 12px;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
-  background: rgba(25, 25, 25, 0.3); // Subtle dark glass
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 0 18px;
   color: #fff;
   font-size: 13px;
   font-weight: 500;
   z-index: 10000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 12px;
+    border-radius: 999px;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 16, 32, 0.72),
+      rgba(7, 11, 24, 0.52)
+    );
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    z-index: -1;
+  }
 
   .left-nav,
   .right-nav {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     height: 100%;
+    pointer-events: auto;
   }
 
   .nav-item {
     cursor: default;
-    padding: 0 4px;
+    padding: 0 10px;
     height: 100%;
     display: flex;
     align-items: center;
-    border-radius: 4px;
-    transition: background 0.2s;
+    border-radius: 999px;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+    color: rgba(235, 241, 255, 0.88);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
     &.bold {
       font-weight: 700;
+      letter-spacing: 0.04em;
     }
   }
 
@@ -47,11 +72,11 @@
     align-items: center;
     cursor: pointer;
     height: 100%;
-    padding: 0 4px;
-    border-radius: 4px;
+    padding: 0 8px;
+    border-radius: 999px;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     img {
@@ -73,20 +98,22 @@
 
   .date-time {
     font-variant-numeric: tabular-nums;
+    color: rgba(255, 255, 255, 0.78);
   }
 
   @media (max-width: 767px) {
-    height: 24px;
-    padding: 0 8px;
+    top: 10px;
+    height: 40px;
+    padding: 0 10px;
     font-size: 11px;
 
     .left-nav,
     .right-nav {
-      gap: 8px;
+      gap: 6px;
     }
 
     .nav-item {
-      padding: 0 2px;
+      padding: 0 8px;
     }
 
     .nav-icon img {
@@ -100,13 +127,18 @@
   }
 
   @media (max-width: 479px) {
-    height: 22px;
-    padding: 0 6px;
+    top: 8px;
+    height: 38px;
+    padding: 0 8px;
     font-size: 10px;
 
     .left-nav,
     .right-nav {
-      gap: 6px;
+      gap: 4px;
+    }
+
+    .nav-item {
+      padding: 0 6px;
     }
   }
 }
