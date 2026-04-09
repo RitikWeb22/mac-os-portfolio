@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import MacWindows from "./MacWindows";
-import Markdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { decco, vsDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import "./note.scss";
 import { ocean } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import "./note.scss";
+
 const Note = ({ windowName, windowState, setWindowState }) => {
   const [markdown, setMarkdown] = useState(null);
 
   useEffect(() => {
     fetch("/note.txt")
       .then((res) => res.text())
-      .then((text) => setMarkdown(text));
+      .then((text) => setMarkdown(text))
+      .catch(() => setMarkdown("Unable to load notes right now."));
   }, []);
 
   return (
@@ -31,7 +31,7 @@ const Note = ({ windowName, windowState, setWindowState }) => {
             {markdown}
           </SyntaxHighlighter>
         ) : (
-          <p>Loading</p>
+          <p className="note-loading">Loading profile notes...</p>
         )}
       </div>
     </MacWindows>

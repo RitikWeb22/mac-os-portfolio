@@ -1,144 +1,101 @@
 /**
- * @file: profile.config.ts
+ * @file: profile.snapshot.ts
  * @author: Ritik
- * @summary: Product-focused Full-Stack Software Engineer (MERN + Next.js).
+ * @summary: Full-stack developer building AI-first web products.
  */
 
 // --------------------------------------------------
-// 1. CORE TECH STACK
+// 1) CURRENT POSITIONING
 // --------------------------------------------------
 
-const TECH_STACK = {
-  frontend: [
-    "React.js",    // 95%
-    "Next.js",     // 90%
-    "Tailwind CSS", // 90%
-    "HTML5 / CSS3", // 95%
-    "GSAP / Framer", // 70%
-  ],
-  backend: [
-    "Node.js",     // 90%
-    "Express.js",  // 90%
-    "MongoDB",     // 85%
-    "PostgreSQL",  // 75%
-    "REST APIs",   // 90%
-  ],
-  ai_gen: [
-    "OpenAI APIs",
-    "Image Detection / Nano Image",
-    "Prompt Engineering",
-  ],
-  tools: [
-    "Git & GitHub",
-    "Docker (Basics)",
-    "AWS (EC2, S3)",
-    "Figma",
-    "Linux",
-  ],
+const PROFILE = {
+  role: "Full-Stack Developer",
+  focus: "Scalable web products with AI workflows",
+  location: "New Delhi, India",
+  education: "BCA (Software Engineering) - Amity University Online",
+  program: "Sheryians Cohort 2.0",
 };
 
 // --------------------------------------------------
-// 2. PROFESSIONAL EXPERIENCE
+// 2) PRIMARY STACK
 // --------------------------------------------------
 
-type Impact = {
-  role: string;
-  achievements: string[];
-  tech: string[];
+const STACK = {
+  frontend: ["React", "TypeScript", "SCSS", "Vite"],
+  backend: ["Node.js", "Express.js", "MongoDB", "Redis"],
+  ai: ["LangChain", "LangGraph", "Gemini", "Mistral", "Cohere"],
+  tooling: ["GitHub", "REST APIs", "Realtime Patterns"],
 };
 
-class ProfessionalHistory {
-  /**
-   * CURRENT ROLE
-   * @period 2023 - Present
-   */
-  public async Independent_Developer(): Promise<Impact> {
-    const role = "Full-Stack Software Engineer";
-
-    const achievements = [
-      "Built production-ready MERN & Next.js applications",
-      "Developed AI-powered web products using GenAI APIs",
-      "Optimized frontend performance (Lighthouse 85 → 97)",
-      "Designed scalable REST APIs with authentication",
-      "Deployed applications on Vercel & AWS",
-    ];
-
-    const tech = ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS", "GenAI"];
-
-    return { role, achievements, tech };
-  }
-
-  /**
-   * PROJECT EXPERIENCE
-   * @period 2022 - 2023
-   */
-  public Product_Building_Phase(): void {
-    // Key Projects:
-    // 1. AI Interior Design Generator (Next.js + GenAI)
-    // 2. Metal Industry Business Website (React + API)
-    // 3. Figma-like Web Editor using DOM & Canvas
-    // 4. Full Authentication System (JWT + Role Based Access)
-  }
-}
-
 // --------------------------------------------------
-// 3. PROJECT HIGHLIGHTS
+// 3) FLAGSHIP PROJECTS
 // --------------------------------------------------
 
-interface Project {
+type Project = {
   name: string;
-  description: string;
+  oneLiner: string;
   stack: string[];
-}
+};
 
-const featuredProjects: Project[] = [
+const projects: Project[] = [
   {
-    name: "AI Interior Design Generator",
-    description: "AI-powered web app that generates interior designs from user input.",
-    stack: ["Next.js", "Tailwind CSS", "OpenAI", "Vercel"],
+    name: "INTELLIX",
+    oneLiner:
+      "Agentic AI chat product with real-time streaming and multi-model failover.",
+    stack: ["React", "Node.js", "Socket.IO", "LangChain", "MongoDB", "Redis"],
   },
   {
-    name: "Refund Image Verification System",
-    description: "Detects AI-generated or manipulated images to prevent refund scams.",
-    stack: ["MERN", "GenAI", "Image Detection"],
+    name: "VIZO",
+    oneLiner:
+      "Emotion-aware music recommendation product using real-time vision inputs.",
+    stack: ["React", "Express", "MongoDB", "MediaPipe", "SCSS"],
   },
   {
-    name: "Figma-like Web Editor",
-    description: "Layer-based visual editor with drag, zoom, history, and export features.",
-    stack: ["JavaScript", "DOM", "Canvas API"],
+    name: "PIXELFLIX",
+    oneLiner:
+      "Movie discovery and watchlist platform with auth and admin capabilities.",
+    stack: ["React", "Redux Toolkit", "Node.js", "MongoDB", "JWT"],
+  },
+  {
+    name: "Software Helper",
+    oneLiner:
+      "AI planning workspace generating product analysis, architecture, and database design.",
+    stack: ["React", "TypeScript", "Express", "LangGraph", "LangChain"],
+  },
+  {
+    name: "AI Dealer Breaker",
+    oneLiner:
+      "Voice negotiation platform with leaderboard-based deal performance.",
+    stack: ["React 19", "Node.js", "Express 5", "MongoDB", "Vapi"],
+  },
+  {
+    name: "AI Battle Areana",
+    oneLiner:
+      "Dual-model battle arena where judge models score and compare responses.",
+    stack: ["React", "TypeScript", "Express", "LangGraph", "Gemini"],
   },
 ];
 
 // --------------------------------------------------
-// 4. EDUCATION
+// 4) WORK STYLE
 // --------------------------------------------------
 
-const education = {
-  degree: "Bachelor’s Degree (Computer / IT Related)",
-  focus: ["Data Structures & Algorithms", "Web Development", "Software Engineering"],
-};
+const WORK_STYLE = [
+  "Ship end-to-end features from UI to backend",
+  "Prioritize product thinking over template cloning",
+  "Build reusable systems with clean, maintainable code",
+  "Iterate quickly with user feedback",
+];
 
-// --------------------------------------------------
-// 5. CAREER STATUS
-// --------------------------------------------------
+export { PROFILE, STACK, projects, WORK_STYLE };
 
-const availability = {
-  status: "Open to Opportunities",
-  location: "India / Remote",
-  interests: ["Product Engineering", "Startup Environment", "AI-driven Applications"],
-};
-
-export default new ProfessionalHistory();
-
-
-```bash
-# TERMINAL OUTPUT
-# ---------------------------------------
+/*
+TERMINAL SNAPSHOT
+---------------------------------------
 $ ritik --profile
-> Role: Full-Stack Software Engineer
-> Stack: MERN | Next.js | GenAI
-> Projects: Production-Ready
-> Availability: Open to Opportunities
-> Location: New Delhi
-> Status: Ready to Build 🚀
-```
+> Role: Full-Stack Developer
+> Stack: React | TypeScript | Node | MongoDB | AI Workflows
+> Focus: Scalable web and SaaS products
+> Availability: Open to meaningful opportunities
+> Status: Shipping actively
+*/
